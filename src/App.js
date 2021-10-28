@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <h1>React Starter App</h1>
+      <h1>Tourverse - escape to the nature</h1>
     </div>
   );
 }
