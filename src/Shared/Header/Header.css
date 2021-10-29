@@ -1,0 +1,21 @@
+
+header#header {
+    background-color: forestgreen;
+    padding: 10px 0;
+}
+#logo img {
+    width: 12%;
+}
+.nav {
+    margin-top: 20px;
+}
+.nav a {
+    color: white;
+    font-size: 20px;
+    margin-top: 109px;
+    padding: 20px;
+}
+.nav a:hover {
+    background-color: #556385;
+    border-radius: 10px;
+}

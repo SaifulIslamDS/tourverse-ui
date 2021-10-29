@@ -1,0 +1,7 @@
+#banner {
+    background-color: rgb(19, 134, 168);
+    height: 90vh;
+}
+.banner-image img {
+    border-radius: 50%;
+}
