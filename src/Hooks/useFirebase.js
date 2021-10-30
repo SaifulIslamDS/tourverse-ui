@@ -1,6 +1,6 @@
 import { useState } from "react"
-import initializeAuthentication from "../Pages/Login/Firebase/firebase.init";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import initializeAuthentication from "../Firebase/firebase.init";
 
 initializeAuthentication();
 

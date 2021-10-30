@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import initializeAuthentication from '../../../Firebase/firebase.init';
 import './Login.css';
-import initializeAuthentication from '../Firebase/firebase.init';
 import {
     getAuth,
     signInWithPopup,
