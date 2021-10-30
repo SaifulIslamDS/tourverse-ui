@@ -7,7 +7,7 @@ const Resorts = () => {
 
       //use useEffects hook to load data 
       useEffect(() => {
-        fetch("/resorts.json")
+        fetch("https://tourverse-ss.herokuapp.com/resorts")
         .then(res => res.json())
         .then(data => setResorts(data))
     }, []);
