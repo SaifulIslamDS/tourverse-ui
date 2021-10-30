@@ -2,3 +2,29 @@
     color: white;
     padding: 20px;
 }
+
+.resort-image {
+    border-radius: 20px;
+    cursor: pointer;
+    transition: width 1s, height 1s, transform 1s;
+}
+
+.resort-image:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.book-btn {
+    background-color: greenyellow;
+    margin-top: 10px;
+    padding: 5px 20px;
+    border-radius: 10px;
+    color: darkblue;
+    font-size: 22px;
+    transition: width 1s, height 1s, transform 1s, background-color 1s, color 1s;
+}
+
+.book-btn:hover {
+    background-color: #0A0B4D;
+    color: white;
+    transform: scale(1.2);
+}
