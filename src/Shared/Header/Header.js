@@ -17,13 +17,15 @@ const Header = () => {
                         <Link to="/">Home</Link>
                         <Link to="/manageresorts">Manage Resorts</Link>
                         <Link to="/bookings">Bookings</Link>
-                        <span>{user.email}</span>
+
                         { 
                             (user.email) ? (
-                            <Link to="/login"><button onClick={handleSignOut}>  Logout
-                            </button></Link>) 
-                            : (
-                                <Link to="/login">Login</Link>)
+                            <>
+                                <Link to="/addresort">Add resort</Link>
+                                <span>{user.email}</span>
+                                <Link to="/login"><button onClick={handleSignOut}>Logout</button></Link>
+                            </>
+                            ) : (<Link to="/login">Login</Link>)
                         }
                     </div>
                 </div>

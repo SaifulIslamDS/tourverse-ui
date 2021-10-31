@@ -3,6 +3,10 @@ import React from 'react';
 const ResortTable = (props) => {
     const {name, img, location, price, description } = props.rsrt;
 
+    const handleDeleteResort = () => {
+        alert("Delete button hitted")
+    }
+
     return ( 
     <>
         <tr className="text-left">
@@ -12,7 +16,7 @@ const ResortTable = (props) => {
             <td>{price}</td>
             <td>{description}</td>
             <td><button className="px-4 py-1 bg-yellow-500 text-white">Update</button></td>
-            <td><button className="px-4 py-1 bg-red-700 text-white">Delete</button></td>
+            <td><button onClick={handleDeleteResort} className="px-4 py-1 bg-red-700 text-white">Delete</button></td>
         </tr>
     </>
     );
