@@ -9,11 +9,12 @@ import {
 import Home from './Pages/Home/Home';
 import Header from './Shared/Header/Header';
 import Footer from './Shared/Footer/Footer';
-import BookNow from './Pages/BookNow/BookNow';
+import Bookings from './Pages/Bookings/Bookings';
 import Login from './Pages/Login/Login/Login';
 import NotFound from './Pages/NotFound/NotFound';
 import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
+import ManageResorts from './Pages/ManageResorts/ManageResorts';
 
 function App() {
   return (
@@ -31,8 +32,11 @@ function App() {
               <Route path="/home">
                 <Home></Home>
               </Route>
-              <PrivateRoute path="/booknow">
-                <BookNow></BookNow>
+              <PrivateRoute path="/manageresorts">
+                <ManageResorts></ManageResorts>
+              </PrivateRoute>
+              <PrivateRoute path="/bookings">
+                <Bookings></Bookings>
               </PrivateRoute>
               <Route path="/login">
                 <Login></Login>

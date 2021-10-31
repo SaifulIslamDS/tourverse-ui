@@ -7,13 +7,12 @@ const Resorts = () => {
 
       //use useEffects hook to load data 
       useEffect(() => {
-        fetch("/resorts.json")
+        fetch("http://localhost:5000/resorts")
         .then(res => res.json())
         .then(data => setResorts(data))
     }, []);
     
     // console.log(resorts);
-
 
     return (
         <section id="resorts">
