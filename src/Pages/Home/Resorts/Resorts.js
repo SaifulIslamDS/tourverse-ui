@@ -19,7 +19,7 @@ const Resorts = () => {
             <div className="container mx-auto">
                 <div className="grid grid-cols-2 gap-14">
                 {
-                    //loop through cards with map method
+                    //loop through resorts with map method
                     resorts.map(resort => <Resort
                         key={resort.name}
                         resort={resort}
