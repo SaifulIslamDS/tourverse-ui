@@ -13,12 +13,15 @@ initializeAuthentication();
 const useFirebase = () => {
 
     const [user, setUser] = useState({});
-    const [error, setError] = useState('');
+    // const [error, setError] = useState('');
 
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
 
     const handleGoogleLogin = () => {
+        return signInWithPopup(auth, googleProvider);
+    };
+   /*  const handleGoogleLogin = () => {
         signInWithPopup(auth, googleProvider)
         .then(result => {
             const user = result.user;  
@@ -28,7 +31,7 @@ const useFirebase = () => {
             setError(error.message);
         })
 
-    };
+    }; */
 
     const handleSignOut = () => {
         signOut(auth)
@@ -47,7 +50,7 @@ const useFirebase = () => {
 
     return {
         user,
-        error,
+        // error,
         handleGoogleLogin,
         handleSignOut
     };

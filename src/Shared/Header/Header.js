@@ -15,7 +15,7 @@ const Header = () => {
                     </div>
                     <div className="nav">
                         <Link to="/">Home</Link>
-                        <Link to="/placeorder">Place Order</Link>
+                        <Link to="/booknow">Book Now</Link>
                         <span>{user.email}</span>
                         { 
                             (user.email) ? (

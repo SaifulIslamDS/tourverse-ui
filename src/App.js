@@ -9,10 +9,11 @@ import {
 import Home from './Pages/Home/Home';
 import Header from './Shared/Header/Header';
 import Footer from './Shared/Footer/Footer';
-import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
+import BookNow from './Pages/BookNow/BookNow';
 import Login from './Pages/Login/Login/Login';
 import NotFound from './Pages/NotFound/NotFound';
 import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -30,9 +31,9 @@ function App() {
               <Route path="/home">
                 <Home></Home>
               </Route>
-              <Route path="/placeorder">
-                <PlaceOrder></PlaceOrder>
-              </Route>
+              <PrivateRoute path="/booknow">
+                <BookNow></BookNow>
+              </PrivateRoute>
               <Route path="/login">
                 <Login></Login>
               </Route>
