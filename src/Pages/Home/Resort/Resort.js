@@ -4,7 +4,7 @@ import './Resort.css';
 const Resort = (props) => {
     const {name, img, location, description, price} = props.resort;
     const handleBookNow = () => {
-        alert('Hello from book now');
+        alert('Book now button clicked');
     }
     return (
         <div className="resort">

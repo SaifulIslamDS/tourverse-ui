@@ -3,20 +3,28 @@ import React from 'react';
 const ResortTable = (props) => {
     const {name, img, location, price, description } = props.rsrt;
 
-    const handleDeleteResort = () => {
+    const handleDeleteResort = id => {
         alert("Delete button hitted")
     }
 
+    const handleUpdateResort = id => {
+        alert("Update button hitted")
+    }
+
     return ( 
-    <>
+    <>  
         <tr className="text-left">
             <td className="text-xl">{name}</td>
             <td><img src={img} alt="" /></td> 
             <td>{location}</td>
             <td>{price}</td>
             <td>{description}</td>
-            <td><button className="px-4 py-1 bg-yellow-500 text-white">Update</button></td>
-            <td><button onClick={handleDeleteResort} className="px-4 py-1 bg-red-700 text-white">Delete</button></td>
+            <td>
+                <button onClick={handleUpdateResort} className="px-4 py-1 bg-yellow-500 text-white">Update</button>
+            </td>
+            <td>
+                <button onClick={handleDeleteResort} className="px-4 py-1 bg-red-700 text-white">Delete</button>
+            </td>
         </tr>
     </>
     );
