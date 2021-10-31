@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import ResortTable from '../ResortTable/ResortTable';
 import './ManageResorts.css';
 
@@ -12,6 +13,11 @@ const ManageResorts = () => {
             setResortTable(data);
         })
     }, []);
+
+    const handleAddResort = () => {
+        <Link to="/">Home</Link>
+        // alert("Add resort button clicked");
+    }
     
     return (
         <section id="manage-resorts">
@@ -20,7 +26,7 @@ const ManageResorts = () => {
                 <div className="grid grid-cols-6">
                     <div className="resorts-nav">
                         <button className="text-white bg-green-800 px-6 py-2">All resorts</button>
-                        <button className="text-white bg-green-800 px-6 py-2 mt-6">Add resort</button>
+                        <button onClick={handleAddResort} className="text-white bg-green-800 px-6 py-2 mt-6">Add resort</button>
                     </div>
                     <div className="col-span-5">
                         <table style={{"width": "100%"}} id="resort-table"> 
