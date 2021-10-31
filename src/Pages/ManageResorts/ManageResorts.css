@@ -7,3 +7,25 @@
 #resort-table img {
     padding: 10px;
 }
+
+#resort-table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #resort-table td, #resort-table  th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #resort-table  tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #resort-table  tr:hover {background-color: #ddd;}
+  
+  #resort-table  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }

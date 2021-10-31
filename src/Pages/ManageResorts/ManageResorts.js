@@ -18,13 +18,9 @@ const ManageResorts = () => {
             <h2 className="text-5xl mb-10">Manage your resorts from here</h2>
             <div className="container mx-auto">
                 <div className="grid grid-cols-6">
-                    <div>
-                        <ul>
-                            <li><button>All resorts</button></li>
-                            <li><button>Add resort</button></li>
-                            <li><button>Update Resorts</button></li>
-                            <li><button>Delete Resorts</button></li>
-                        </ul>
+                    <div className="resorts-nav">
+                        <button className="text-white bg-green-800 px-6 py-2">All resorts</button>
+                        <button className="text-white bg-green-800 px-6 py-2 mt-6">Add resort</button>
                     </div>
                     <div className="col-span-5">
                         <table style={{"width": "100%"}} id="resort-table"> 
