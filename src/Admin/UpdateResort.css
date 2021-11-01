@@ -1,0 +1,41 @@
+#update-resort {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.resort-name {
+    color: #228B22;
+    font-weight: 700;
+}
+
+
+form#update-resort-form {
+    background-color: rgb(221, 221, 228);
+    width: 40%;
+    text-align: center;
+    margin: 0 auto;
+    border: 1px solid;
+    padding: 10px;
+}
+
+input, textarea {
+    color: black;
+    background-color: rgb(192, 192, 207);
+    margin: 5px 0;
+    padding: 5px 0;
+    font-size: 22px;
+    width: 100%;
+    text-align: center;
+    border: 1px dotted;
+}
+
+input[type="submit"] {
+    background-color: green;color: 
+    white;
+    width: 50%;
+}
+
+textarea.img-url {
+    resize: none;
+}

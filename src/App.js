@@ -16,6 +16,7 @@ import AuthProvider from './Context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ManageResorts from './Pages/ManageResorts/ManageResorts';
 import AddResort from './Admin/AddResort';
+import UpdateResort from './Admin/UpdateResort';
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
               </PrivateRoute>
               <PrivateRoute path="/ressorts/add">
                 <AddResort></AddResort>
+              </PrivateRoute>
+              <PrivateRoute path="/ressorts/update/:id">
+                <UpdateResort></UpdateResort>
               </PrivateRoute>
               <Route path="/login">
                 <Login></Login>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './ManageResorts.css';
 
 const ManageResorts = () => {
@@ -7,17 +8,32 @@ const ManageResorts = () => {
     useEffect(() => {
         fetch("http://localhost:5000/resorts/")
         .then(res => res.json())
-        .then(data => {
-            setResorts(data);
-        })
+        .then(data => setResorts(data));
     }, []);
 
     const handleDeleteResort = id => {
-        alert("Delete button hitted")
+        const confirmation = window.confirm("Are you sure you want to delete this resort?");
+        if (confirmation) {            
+            const url = `http://localhost:5000/resorts/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.deletedCount > 0){
+                    alert('Resort was successfully deleted')
+                    const remainingResorts = resorts.filter(resort => resort._id !== id); 
+                    setResorts(remainingResorts);
+                }
+            });
+        }
     }
 
     const handleUpdateResort = id => {
-        alert("Update button hitted")
+        const confirmation = window.confirm("Are you sure you want to update this resort?")
+        if (confirmation) { 
+            //
+        }
     }
 
     return (
@@ -42,23 +58,20 @@ const ManageResorts = () => {
 
                             {
                                 resorts.map(resort => 
-                                <tr key={resort.name} className="text-left">
+                                <tr key={resort._id} className="text-left">
                                     <td className="text-xl">{resort.name}</td>
                                     <td><img src={resort.img} alt="" /></td> 
                                     <td>{resort.location}</td>
                                     <td>{resort.price}</td>
                                     <td>{resort.description}</td>
                                     <td>
-                                        <button onClick={handleUpdateResort} className="px-4 py-1 bg-yellow-500 text-white">Update</button>
+                                        <Link to={`/ressorts/update/${resort._id}`}><button onClick={handleUpdateResort} className="px-4 py-1 bg-yellow-500 text-white">Update</button></Link>
                                     </td>
                                     <td>
-                                        <button onClick={handleDeleteResort} className="px-4 py-1 bg-red-700 text-white">Delete</button>
+                                        <button onClick={() => handleDeleteResort(resort._id)} className="px-4 py-1 bg-red-700 text-white">Delete</button>
                                     </td>
                                 </tr>
                                 )
-
-
-                                
                             }
 
                             {/* {

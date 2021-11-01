@@ -49,9 +49,6 @@ const AddResort = () => {
                 
                 <input type="submit" value="Add Resort" />
             </form>
-            
-
-
         </section>
     );
 };
