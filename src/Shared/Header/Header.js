@@ -21,7 +21,7 @@ const Header = () => {
                         { 
                             (user.email) ? (
                             <>
-                                <Link to="/addresort">Add resort</Link>
+                                <Link to="/ressorts/add">Add resort</Link>
                                 <span>{user.email}</span>
                                 <Link to="/login"><button onClick={handleSignOut}>Logout</button></Link>
                             </>

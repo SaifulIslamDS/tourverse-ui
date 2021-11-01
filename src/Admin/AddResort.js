@@ -17,7 +17,7 @@ const AddResort = () => {
 
         const newResort = {name, image, location, price, description};
 
-        fetch('https://tourverse-ss.herokuapp.com/resorts', {
+        fetch('http://localhost:5000/resorts/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -40,12 +40,14 @@ const AddResort = () => {
             <h2 className="text-5xl mb-10">Add resort</h2>
             <form onSubmit={handleAddResort} id="add-resort-form">
                 <input type="text" ref={nameRef} placeholder="Name of resort"/>
-                <textarea className="img-url" type="text" ref={imageRef} placeholder="Image URL" rows="1"/>
+
+                <input type="url" pattern="https://.*" ref={imageRef} placeholder="Image URL"  className="img-url" rows="1"/>
+
                 <input type="text" ref={locRef} placeholder="Location"/>
                 <input type="number" ref={priceRef} placeholder="Price"/>
                 <textarea ref={destRef} placeholder="Description" />
                 
-                <input type="submit" value="Add" />
+                <input type="submit" value="Add Resort" />
             </form>
             
 

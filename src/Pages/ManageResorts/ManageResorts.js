@@ -1,18 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import ResortTable from '../ResortTable/ResortTable';
 import './ManageResorts.css';
 
 const ManageResorts = () => {
-    const [resortTable, setResortTable] = useState([]);
+    const [resorts, setResorts] = useState([]);
     //use useEffects hook to load data 
     useEffect(() => {
-        fetch("https://tourverse-ss.herokuapp.com/resorts")
+        fetch("http://localhost:5000/resorts/")
         .then(res => res.json())
         .then(data => {
-            setResortTable(data);
+            setResorts(data);
         })
     }, []);
-    
+
+    const handleDeleteResort = id => {
+        alert("Delete button hitted")
+    }
+
+    const handleUpdateResort = id => {
+        alert("Update button hitted")
+    }
+
     return (
         <section id="manage-resorts">
             <h2 className="text-5xl mb-10">Manage your resorts from here</h2>
@@ -32,16 +39,36 @@ const ManageResorts = () => {
                             </tr>
 
                             {/* Resort table data  */}
+
                             {
+                                resorts.map(resort => 
+                                <tr key={resort.name} className="text-left">
+                                    <td className="text-xl">{resort.name}</td>
+                                    <td><img src={resort.img} alt="" /></td> 
+                                    <td>{resort.location}</td>
+                                    <td>{resort.price}</td>
+                                    <td>{resort.description}</td>
+                                    <td>
+                                        <button onClick={handleUpdateResort} className="px-4 py-1 bg-yellow-500 text-white">Update</button>
+                                    </td>
+                                    <td>
+                                        <button onClick={handleDeleteResort} className="px-4 py-1 bg-red-700 text-white">Delete</button>
+                                    </td>
+                                </tr>
+                                )
+
+
+                                
+                            }
+
+                            {/* {
                                 resortTable.map(rsrt => <ResortTable
                                     key={resortTable.name}
                                     rsrt={rsrt}
                                 />)
-                            }
-                            
+                            } */}
                         </table>
                     </div>
-
                 </div>
             </div>
         </section>
