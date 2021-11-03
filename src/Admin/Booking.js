@@ -36,7 +36,7 @@ const Booking = () => {
                 <input defaultValue={user.displayName} {...register("name")} />
 
                 <input defaultValue={user.email} {...register("email", { required: true })} />
-                
+
                 <input defaultValue={user.photoURL} {...register("photo")} />
 
                 <input type="submit"  value="Click to confirm"/>
