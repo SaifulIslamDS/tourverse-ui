@@ -17,7 +17,7 @@ const AddResort = () => {
 
         const newResort = {name, image, location, price, description};
 
-        fetch('http://localhost:5000/resorts/', {
+        fetch('http://localhost:7000/resorts/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

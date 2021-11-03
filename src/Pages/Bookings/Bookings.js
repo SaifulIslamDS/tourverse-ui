@@ -1,7 +1,7 @@
 import React from 'react';
 import './Bookings.css';
 
-const BookNow = () => {
+const Bookings = () => {
     return (
         <section id="bookings">
             <h2 className="text-5xl">All of your bookings</h2>
@@ -9,4 +9,4 @@ const BookNow = () => {
     );
 };
 
-export default BookNow;
+export default Bookings;

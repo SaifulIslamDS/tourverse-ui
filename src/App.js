@@ -17,6 +17,7 @@ import PrivateRoute from './PrivateRoute/PrivateRoute';
 import ManageResorts from './Pages/ManageResorts/ManageResorts';
 import AddResort from './Admin/AddResort';
 import UpdateResort from './Admin/UpdateResort';
+import Booking from './Admin/Booking';
 
 function App() {
   return (
@@ -40,6 +41,12 @@ function App() {
               <PrivateRoute path="/bookings">
                 <Bookings></Bookings>
               </PrivateRoute>
+              <PrivateRoute path="/booking">
+                <Booking></Booking>
+              </PrivateRoute>
+              {/* <PrivateRoute path="/booking/:id">
+                <Booking></Booking>
+              </PrivateRoute> */}
               <PrivateRoute path="/ressorts/add">
                 <AddResort></AddResort>
               </PrivateRoute>

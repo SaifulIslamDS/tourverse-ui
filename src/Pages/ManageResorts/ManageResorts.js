@@ -6,7 +6,7 @@ const ManageResorts = () => {
     const [resorts, setResorts] = useState([]);
     //use useEffects hook to load data 
     useEffect(() => {
-        fetch("http://localhost:5000/resorts/")
+        fetch("http://localhost:7000/resorts/")
         .then(res => res.json())
         .then(data => setResorts(data));
     }, []);
@@ -14,7 +14,7 @@ const ManageResorts = () => {
     const handleDeleteResort = id => {
         const confirmation = window.confirm("Are you sure you want to delete this resort?");
         if (confirmation) {            
-            const url = `http://localhost:5000/resorts/${id}`;
+            const url = `http://localhost:7000/resorts/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

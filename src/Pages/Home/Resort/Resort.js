@@ -1,10 +1,13 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 import './Resort.css';
 
 const Resort = (props) => {
     const {name, img, location, description, price} = props.resort;
+    const history = useHistory();
+
     const handleBookNow = () => {
-        alert('Book now button clicked');
+        history.push('/booking');
     }
     return (
         <div className="resort">
