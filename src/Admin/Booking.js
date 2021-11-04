@@ -5,10 +5,8 @@ import './Booking.css';
 
 const Booking = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
-
-
     const {user} =  useAuths();
-
+    
     const onConfirm = data => {
         const url = `http://localhost:7000/bookings`;
         fetch(url, {
