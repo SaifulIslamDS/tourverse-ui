@@ -3,11 +3,11 @@ import { useHistory } from 'react-router';
 import './Resort.css';
 
 const Resort = (props) => {
-    const {name, img, location, description, price} = props.resort;
+    const {_id ,name, img, location, description, price} = props.resort;
     const history = useHistory();
 
     const handleBookNow = () => {
-        history.push('/booking');
+        history.push(`/booking/${_id}`);
     }
     return (
         <div className="resort">

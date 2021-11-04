@@ -1,51 +1,44 @@
 import React, { useRef } from 'react';
 import './AddResort.css';
+import { useForm } from "react-hook-form";
+
 
 const AddResort = () => {
-    const nameRef = useRef();
-    const imageRef = useRef();
-    const locRef = useRef();
-    const priceRef = useRef();
-    const destRef =useRef();
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const handleAddResort = (e) => {
-        const name = nameRef.current.value;
-        const image = imageRef.current.value;
-        const location = locRef.current.value;
-        const price = priceRef.current.value;
-        const description = destRef.current.value;
-
-        const newResort = {name, image, location, price, description};
-
+    const handleAddResort = (data) => {
         fetch('http://localhost:7000/resorts/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(newResort)
+            body: JSON.stringify(data)
         })
         .then(res => res.json())
         .then(data => {
             if (data.insertedId) {
                 alert('Successfully added a resort.')
-                e.target.reset();
             }
         })
-        e.preventDefault();
     }
-
-
+    
     return (
         <section id="add-resort">
             <h2 className="text-5xl mb-10">Add resort</h2>
-            <form onSubmit={handleAddResort} id="add-resort-form">
-                <input type="text" ref={nameRef} placeholder="Name of resort"/>
+            <form onSubmit={handleSubmit(handleAddResort)} id="add-resort-form">
 
-                <input type="url" pattern="https://.*" ref={imageRef} placeholder="Image URL"  className="img-url" rows="1"/>
+                <input type="text" {...register("name",{ required: true })} placeholder="Name of resort"/>
 
-                <input type="text" ref={locRef} placeholder="Location"/>
-                <input type="number" ref={priceRef} placeholder="Price"/>
-                <textarea ref={destRef} placeholder="Description" />
+                <input {...register("image", { required: true })} placeholder="Image URL"  className="img-url" rows="1"/>
+
+                <input type="text" {...register("location", { required: true })} placeholder="Location"/>
+
+                <input type="number" {...register("price", { required: true })}  placeholder="Price"/>
+
+                <textarea {...register("description")}  placeholder="Description" />
+
+                {errors.exampleRequired && <span>This field is required</span>}
+
                 
                 <input type="submit" value="Add Resort" />
             </form>

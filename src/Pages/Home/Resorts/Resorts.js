@@ -21,7 +21,7 @@ const Resorts = () => {
                 {
                     //loop through resorts with map method
                     resorts.map(resort => <Resort
-                        key={resort.name}
+                        key={resort._id}
                         resort={resort}
                     />)
                 }
