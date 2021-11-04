@@ -12,3 +12,4 @@
     5. There are an google authentication system in this website using firebase. 
     6. Once a user log in, he or she can add, update and delete resorts name, image URL, location, price and description.
 
+#### Clonned from private repo
