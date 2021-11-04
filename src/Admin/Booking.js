@@ -8,7 +8,7 @@ const Booking = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const {user} =  useAuths();
     const {id} = useParams();
-    const [resort, setResort] = useState({});
+    const [resort, setResort] = useState([]);
 
     useEffect(() =>{
         const url = `http://localhost:7000/resorts/${id}`;
@@ -44,7 +44,7 @@ const Booking = () => {
             <div className="container mx-auto mt-6">
                 <div className="grid grid-cols-2">
                     <div>
-                        <img src={resort?.img} alt="" />
+                        <img src={resort.img} alt="" />
                     </div>
                     <div>
                         <form id="booking-form" onSubmit={handleSubmit(onConfirm)}>

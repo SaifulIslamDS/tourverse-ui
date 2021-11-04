@@ -108,7 +108,7 @@ const UpdateResort = () => {
             <form onSubmit={handleUpdateResort} id="update-resort-form">
                 <input type="text" value={resort.name || ''} onChange={handlNameChange} placeholder="Name of resort"/>
 
-                <input type="url" value={resort.image || ''} onChange={handlImageChange} pattern="https://.*" placeholder="Image URL"  className="img-url" rows="1"/>
+                <input type="url" value={resort.img || ''} onChange={handlImageChange} placeholder="Image URL"  className="img-url" rows="1"/>
 
                 <input type="text" value={resort.location || ''} onChange={handleLocationChange}  placeholder="Location"/>
 

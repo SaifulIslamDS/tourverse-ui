@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import './AddResort.css';
 import { useForm } from "react-hook-form";
 
@@ -29,7 +29,7 @@ const AddResort = () => {
 
                 <input type="text" {...register("name",{ required: true })} placeholder="Name of resort"/>
 
-                <input {...register("image", { required: true })} placeholder="Image URL"  className="img-url" rows="1"/>
+                <input type="url" {...register("img", { required: true })} placeholder="Image URL"  className="img-url" rows="1"/>
 
                 <input type="text" {...register("location", { required: true })} placeholder="Location"/>
 
