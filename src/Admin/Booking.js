@@ -11,7 +11,7 @@ const Booking = () => {
     const [resort, setResort] = useState([]);
 
     useEffect(() =>{
-        const url = `http://localhost:7000/resorts/${id}`;
+        const url = `https://tourverse-ss.herokuapp.com/resorts/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => setResort(data))
@@ -20,7 +20,7 @@ const Booking = () => {
     // console.log(resort);
 
     const onConfirm = data => {
-        const url = `http://localhost:7000/bookings`;
+        const url = `https://tourverse-ss.herokuapp.com/bookings`;
         fetch(url, {
             method: 'POST',
             headers: {

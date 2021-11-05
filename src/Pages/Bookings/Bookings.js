@@ -7,7 +7,7 @@ const Bookings = () => {
     const {user} = useAuths();
 
     useEffect(() => {
-        fetch(`http://localhost:7000/bookings/`)
+        fetch(`https://tourverse-ss.herokuapp.com/bookings/`)
         .then(res => res.json())
         .then(data => setBookings(data))
     }, []);
@@ -15,7 +15,7 @@ const Bookings = () => {
     const handleDeleteBooking = id => {        
         const confirmation = window.confirm("Are you sure you want to cancel the booking?"); 
         if ( confirmation ) { 
-            const url = `http://localhost:7000/bookings/${id}`;
+            const url = `https://tourverse-ss.herokuapp.com/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

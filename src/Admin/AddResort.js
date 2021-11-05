@@ -7,7 +7,7 @@ const AddResort = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
     const handleAddResort = (data) => {
-        fetch('http://localhost:7000/resorts/', {
+        fetch('https://tourverse-ss.herokuapp.com/resorts/', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

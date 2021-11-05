@@ -7,7 +7,7 @@ const UpdateResort = () => {
     const [resort, setResort] = useState({});
     // load resorts
     useEffect(() => {
-        const url = `http://localhost:7000/resorts/${id}`;
+        const url = `https://tourverse-ss.herokuapp.com/resorts/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data =>setResort(data))
@@ -76,7 +76,7 @@ const UpdateResort = () => {
     
     // Update form 
     const handleUpdateResort = e => {
-        const url = `http://localhost:7000/resorts/${id}`;
+        const url = `https://tourverse-ss.herokuapp.com/resorts/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

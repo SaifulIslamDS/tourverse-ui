@@ -9,7 +9,7 @@ const Booking = () => {
     
     
     const onConfirm = data => {
-        const url = `http://localhost:7000/bookings`;
+        const url = `https://tourverse-ss.herokuapp.com/bookings`;
         fetch(url, {
             method: 'POST',
             headers: {
