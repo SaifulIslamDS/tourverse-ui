@@ -12,6 +12,25 @@ const Bookings = () => {
         .then(data => setBookings(data))
     }, []);
 
+    const handleDeleteBooking = id => {        
+        const confirmation = window.confirm("Are you sure you want to cancel the booking?"); 
+        if ( confirmation ) { 
+            const url = `http://localhost:7000/bookings/${id}`;
+            fetch(url, {
+                method: 'DELETE'
+            })
+            .then(res => res.json())
+            .then(data => {
+                if(data.deletedCount > 0){
+                    alert('Your booking cancelled! Hope you will change your mind soon.')
+                    const remainingBookings = bookings.filter(booking => booking._id !== id); 
+                    setBookings(remainingBookings);
+                }
+            });
+        }
+
+    }
+
     return (
         <section id="bookings">
             <h2 className="text-5xl mb-10">All of your bookings</h2>
@@ -23,7 +42,6 @@ const Bookings = () => {
                             <th>Customer Email</th>
                             <th>Resort Name</th>
                             <th className="w-1/4">Image</th>
-                            <th>Location</th>
                             <th>price</th>
                             <th>Cancel</th>
                         </tr>
@@ -35,10 +53,9 @@ const Bookings = () => {
                                 <td>{user.email}</td>
                                 <td>{booking.name}</td>
                                 <td><img src={booking.img} alt="" /></td>
-                                <td>{booking.location}</td>
                                 <td>{booking.price}</td>
                                 
-                                <td><button className="px-4 py-1 bg-red-700 text-white">Cancel</button></td>
+                                <td><button onClick={()=> handleDeleteBooking(booking._id)} className="px-4 py-1 bg-red-700 text-white">Cancel</button></td>
 
                             </tr>
                             )

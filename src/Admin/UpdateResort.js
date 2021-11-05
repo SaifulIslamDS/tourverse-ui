@@ -20,7 +20,7 @@ const UpdateResort = () => {
         const updatedName = e.target.value;
         const updatedResort = {
             name: updatedName, 
-            image: resort.image,  
+            image: resort.img,  
             location: resort.location,  
             price: resort.price,  
             description : resort.description,  
@@ -42,7 +42,7 @@ const UpdateResort = () => {
         const updatedLocation = e.target.value;
         const updatedResort = {
             name: resort.name, 
-            image: resort.image,  
+            image: resort.img,  
             location: updatedLocation,  
             price: resort.price,  
             description : resort.description,  
@@ -53,7 +53,7 @@ const UpdateResort = () => {
         const updatedPrice = e.target.value;
         const updatedResort = {
             name: resort.name, 
-            image: resort.image,  
+            image: resort.img,  
             location: resort.location,  
             price: updatedPrice,  
             description : resort.description,  
@@ -64,7 +64,7 @@ const UpdateResort = () => {
         const updatedDescription = e.target.value;
         const updatedResort = {
             name: resort.name, 
-            image: resort.image,  
+            image: resort.img,  
             location: resort.location,  
             price: resort.price,  
             description : updatedDescription,  

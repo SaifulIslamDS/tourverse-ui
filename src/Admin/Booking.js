@@ -30,7 +30,6 @@ const Booking = () => {
         })
         .then(res => res.json())
         .then(result => {
-            // console.log(result);
             if (result.insertedId) {
                 alert('Booked the resort successfully');
             }
@@ -55,14 +54,11 @@ const Booking = () => {
 
                             <input defaultValue={resort.name} {...register("name", { required: true })} />
 
-                            <input defaultValue={resort.location} {...register("location", { required: true })} />
-
                             <input defaultValue={resort.img} {...register("img", { required: true })} />
 
                             <input defaultValue={resort.price} {...register("price", { required: true })} />
                          
                             
-
                             <input type="submit"  value="Click to confirm"/>
                             
                         </form>
