@@ -2,5 +2,18 @@ footer#footer {
     background-color: darkgreen;
     padding: 20px 0;
     color: white;
-    text-align: center;
+}
+
+.footer-logo {
+    width: 30%;
+}
+
+#social-icon svg {
+    font-size: 32px;
+    margin: 16px;
+}
+
+.footer-title {
+    font-size: 22px;
+    margin-bottom: 15px;
 }
