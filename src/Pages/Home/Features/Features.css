@@ -2,5 +2,11 @@
     padding: 50px 0;
 }
 .feature-list li {
+    font-size: 20px;
     padding-bottom: 10px;
 }
+
+.f-icon svg {
+    font-size: 52px;
+    margin-bottom: 30px;
+} 

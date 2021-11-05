@@ -1,6 +1,8 @@
 import React from 'react';
 import feature from '../../../Images/feature.jpg';
 import './Features.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBullseye, faMapMarked } from '@fortawesome/free-solid-svg-icons';
 
 const Features = () => {
     return (
@@ -12,17 +14,20 @@ const Features = () => {
                         <img src={feature} alt="" />
                     </div>
                     <div className="feature-col">
+
+                        <p className="f-icon"><FontAwesomeIcon icon={faMapMarked} /></p>
+
                         <h2 className="text-4xl mb-6">Things To Do</h2>
                         <ul className="feature-list pl-10">
-                            <li>Tourverse camp</li>
-                            <li>Water Sports</li>
-                            <li>Cycling</li>
-                            <li>Kids fun activities</li>
-                            <li>Boating</li>
-                            <li>Canoeing & Kayaking</li>
-                            <li>Outdoor sports</li>
-                            <li>9D Movies</li>
-                            <li>And many more ...</li>
+                            <li className="li-icon"> <FontAwesomeIcon icon={faBullseye} /> Tourverse camp</li>
+                            <li className="li-icon"> <FontAwesomeIcon icon={faBullseye} /> Water Sports</li>
+                            <li className="li-icon"> <FontAwesomeIcon icon={faBullseye} /> Cycling</li>
+                            <li className="li-icon"> <FontAwesomeIcon icon={faBullseye} /> Kids fun activities</li>
+                            <li className="li-icon"> <FontAwesomeIcon icon={faBullseye} /> Boating</li>
+                            <li className="li-icon"> <FontAwesomeIcon icon={faBullseye} /> Canoeing & Kayaking</li>
+                            <li className="li-icon"> <FontAwesomeIcon icon={faBullseye} /> Outdoor sports</li>
+                            <li className="li-icon"> <FontAwesomeIcon icon={faBullseye} /> 9D Movies</li>
+                            <li className="li-icon"> <FontAwesomeIcon icon={faBullseye} /> And many more ...</li>
                         </ul>
                     </div>
                 </div>

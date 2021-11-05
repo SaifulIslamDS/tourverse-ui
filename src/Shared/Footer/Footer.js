@@ -21,8 +21,6 @@ const Footer = () => {
                                 <p>escape to the nature</p>
                             </div>
                         </div>
-
-
                     </div>
                     <div>
                         <h2 className="footer-title" >Important Links</h2>
