@@ -15,7 +15,7 @@ const Resort = (props) => {
             <img className="resort-image" src={img} alt="" />   
             <h4 className="mt-4 text-yellow-400">Location: {location}</h4>
             <p className="pt-4 pb-4 text-lg">{description}</p>
-            <h3 className="text-3xl text-yellow-400">Price : {price}</h3>
+            <h3 className="text-3xl text-yellow-400">Price : {price} / day </h3>
             <button onClick={handleBookNow} className="book-btn">Book now!</button>
         </div>
     );

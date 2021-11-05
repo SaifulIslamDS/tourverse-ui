@@ -42,7 +42,8 @@ const Bookings = () => {
                             <th>Customer Email</th>
                             <th>Resort Name</th>
                             <th className="w-1/4">Image</th>
-                            <th>price</th>
+                            <th>Address</th>
+                            <th>Contact Number</th>
                             <th>Cancel</th>
                         </tr>
 
@@ -53,7 +54,8 @@ const Bookings = () => {
                                 <td>{user.email}</td>
                                 <td>{booking.name}</td>
                                 <td><img src={booking.img} alt="" /></td>
-                                <td>{booking.price}</td>
+                                <td>{booking.city}</td>
+                                <td>{booking.phone}</td>
                                 
                                 <td><button onClick={()=> handleDeleteBooking(booking._id)} className="px-4 py-1 bg-red-700 text-white">Cancel</button></td>
 

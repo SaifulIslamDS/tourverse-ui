@@ -6,7 +6,7 @@ const Banner = () => {
     return (
         <section id="banner" className="text-white">
             <div className="container mx-auto">
-                <div className="grid grid-cols-2 pt-20 pb-20">
+                <div className="grid grid-cols-2 pt-20 pb-20 xs:flex">
                     <div className="banner-text">
                         <h1 className="mt-6 mb-6 text-8xl"><span className="text-yellow-400">Tour</span>verse</h1>
                         <h3 className=" text-4xl">Escape to the nature</h3>

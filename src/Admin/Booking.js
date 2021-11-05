@@ -42,21 +42,26 @@ const Booking = () => {
             
             <div className="container mx-auto mt-6">
                 <div className="grid grid-cols-2">
-                    <div>
+                    <div id="booking-detail">
                         <img src={resort.img} alt="" />
+                        <h3>Location: {resort.location} </h3>
+                        <h4>Price: {resort.price} / 24 hours</h4>
+                        <p>Resort details: {resort.description}</p>
                     </div>
                     <div>
                         <form id="booking-form" onSubmit={handleSubmit(onConfirm)}>
                             
                             <input defaultValue={user.displayName} {...register("displayName", { required: true })} />
 
-                            <input defaultValue={user.email} {...register("email", { required: true })} />
+                            <input value={user.email} {...register("email", { required: true })} />
 
-                            <input defaultValue={resort.name} {...register("name", { required: true })} />
+                            <input value={resort.name} {...register("name", { required: true })} />
 
-                            <input defaultValue={resort.img} {...register("img", { required: true })} />
+                            <input value={resort.img} {...register("img", { required: true })} />
 
-                            <input defaultValue={resort.price} {...register("price", { required: true })} />
+                            <input {...register("city", { required: true })} placeholder="Your city" />
+
+                            <input {...register("phone", { required: true }) } placeholder="Your contact number"  />
                          
                             
                             <input type="submit"  value="Click to confirm"/>
